@@ -4,8 +4,11 @@ from pinglib import *
 from pushover import Client
 
 parser = argparse.ArgumentParser(
-    description="A small command-line application to send customized "
-                "push notifications for general use.")
+    description="A small command-line application to send customized push notifications for general use.",
+    usage="\nThe following macros are available in the 'message' or 'title' fields:"
+          "\n%%t | Prints the current time."
+          "\n\nexample:"
+          "\npingme --message \"The current time is %%t.\" --title \"Title field.\"")
 
 parser.add_argument(
     '--message',

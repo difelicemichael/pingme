@@ -25,4 +25,4 @@ def format_string(m: str) -> str:
     """Format a string and replace known placeholders."""
     return '' \
         if m is None or len(m) < 1 \
-        else m.replace('%d', current_time())
+        else m.replace('%t', current_time())
